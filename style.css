@@ -3,11 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 0.5s;
+  transition: all 0.5s ease-out;
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 body {
-  background-color: rgb(249, 251, 250);
+  background-color: rgb(255, 249, 255);
   overflow-x: hidden;
 }
 nav li a {
@@ -15,7 +16,7 @@ nav li a {
   color: rgb(0, 0, 0);
 }
 nav li a:hover {
-  color: rgb(107, 112, 250);
+  color: rgb(187, 149, 236);
   scale: 0.95;
 }
 nav li {
@@ -29,8 +30,12 @@ header {
   text-align: center;
   display: flex;
   justify-content: space-around;
+  background-color: rgb(255, 249, 255);
   align-items: center;
-  padding: 10px 0;
+  padding: 5px 0 0 0;
+  position: sticky;
+  top: 0;
+  z-index: 999999;
 }
 nav {
   padding-left: 100px;
@@ -45,15 +50,13 @@ nav {
   width: 5px;
   margin: 0 12px;
   border-radius: 50%;
-  background-color: rgb(0, 0, 0, 0.2);
+  background-color: rgb(0, 0, 0, 0.3);
   /* align-items: center; */
 }
-.logo {
-  font-size: 30px;
-  font-weight: bold;
+.logo img {
+  height: 60px;
+  width: 60px;
   left: 100px;
-  /* padding-left: 50px; */
-  cursor: pointer;
 }
 .right {
   display: flex;
@@ -67,8 +70,8 @@ nav {
 .cart:hover {
   /* margin: 0 25px; */
   border-radius: 40px;
-  background-color: rgb(107, 112, 250);
-  color: white;
+  background-color: rgb(187, 149, 236);
+  /* color: white; */
   border: none;
   cursor: pointer;
 }
@@ -76,14 +79,18 @@ nav {
   margin: 0 2px;
   padding: 20px 25px;
   border-radius: 40px;
-  background-color: rgb(107, 112, 250);
-  color: white;
+  background-color: rgb(187, 149, 236);
   border: none;
+  /* color: white; */
   font-size: 14px;
   cursor: pointer;
 }
 .button:hover {
-  background-color: rgb(97, 101, 224);
+  background-color: rgb(162, 121, 215);
+  scale: 0.95;
+}
+.button2:hover {
+  background-color: rgb(162, 121, 215);
   scale: 0.95;
 }
 .design {
@@ -197,7 +204,7 @@ nav {
   left: 0%;
   height: 1000px;
   width: 1500px;
-  background: rgb(237, 246, 242);
+  background-color: rgb(255, 249, 255);
   background: radial-gradient(
     circle,
     rgba(237, 246, 242, 1) 35%,
@@ -216,7 +223,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   /* column-gap: 2px; */
-  margin: 15% 10%;
+  margin: 15% 10% 10% 10%;
   place-items: center;
   /* z-index: 10; */
 }
@@ -224,7 +231,7 @@ nav {
   font-size: 30px;
   text-align: center;
   border: 1px solid rgb(212, 212, 212);
-  background-color: rgb(245, 250, 251);
+  background-color: rgb(255, 249, 255);
   z-index: 1;
   height: 100%;
   width: 100%;
@@ -305,7 +312,7 @@ nav {
   /* filter: grayscale(1); */
 }
 .background {
-  background-color: rgb(245, 250, 251);
+  background-color: rgb(255, 249, 255);
   z-index: 1;
 }
 .bottomright_1 {
@@ -340,12 +347,20 @@ h1 {
   right: 0px;
   z-index: -2;
 }
+#service {
+  /* background-color: ; */
+  height: 10px;
+  width: 10px;
+  position: relative;
+  left: 100px;
+  top: -70px;
+}
 .service_grid {
   /* width: 100vw; */
   height: 300px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin: 150px 200px;
+  margin: 130px 200px;
   column-gap: 80px;
 }
 .service {
@@ -355,7 +370,7 @@ h1 {
   /* text-align: center; */
   padding: 35px;
   position: relative;
-  background-color: rgb(245, 250, 251);
+  background-color: rgb(255, 249, 255);
 }
 .service::before,
 .service::after {
@@ -394,7 +409,7 @@ h1 {
   display: none;
   align-items: center;
   font-size: 12px;
-  color: #7076fb;
+  color: rgb(187, 149, 236);
   font-weight: 600;
   margin-top: 35px;
 }
@@ -402,7 +417,7 @@ h1 {
   display: flex;
 }
 .service:hover {
-  background-color: rgb(245, 250, 251);
+  background-color: rgb(255, 249, 255);
   /* z-index: 10; */
   /* scale: 1.1; */
 }
@@ -489,7 +504,7 @@ h1 {
   margin: 0 2px;
   padding: 15px 30px 15px 70px;
   border-radius: 40px;
-  background-color: rgb(107, 112, 250);
+  background-color: rgb(187, 149, 236);
   color: white;
   border: none;
   font-size: 12px;
@@ -544,7 +559,7 @@ h1 {
   margin: 0 8%;
 }
 .product {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 253, 255);
   padding: 0;
   border-radius: 35px;
 }
@@ -646,7 +661,7 @@ h1 {
   margin: 0 2px;
   padding: 0px 0px px 0px;
   border-radius: 40px;
-  background-color: rgb(107, 112, 250);
+  background-color: rgb(187, 149, 236);
   color: white;
   border: none;
   font-size: 13px;
@@ -752,9 +767,13 @@ h1 {
   width: 100%;
   top: 15%;
 }
+footer {
+  /* background-color: rgb(59, 0, 58); */
+  margin-top: 10%;
+}
 .footer_grid {
-  margin: 0 0 0 7%;
-  margin-bottom: 400px;
+  margin: 0 0 2% 7%;
+  /* margin-bottom: 400px; */
 
   /* ****************************************************/
   display: grid;
@@ -764,7 +783,8 @@ h1 {
 .grid_column {
   /* padding-left: 20px; */
   /* text-align: center; */
-  line-height: 40px;
+  /* margin-top: 60px; */
+  line-height: 30px;
   font-size: 13px;
   color: rgb(0, 0, 0, 0.5);
   font-weight: 600;
@@ -775,15 +795,41 @@ h1 {
   font-weight: 600;
   margin-bottom: 25px;
 }
-.grid_column:hover {
+.grid_column li {
+  list-style: none;
+}
+.grid_column li:hover {
+  cursor: pointer;
+  color: rgb(100, 100, 100);
+  scale: 1.1;
 }
 .copyright_payment {
-  margin: 0 7%;
+  margin: 0;
+  width: 90%;
+  position: relative;
+  left: 5%;
   border-top: 1px solid black;
 }
-.payment_img {
+.payment_img ul {
   display: flex;
+  list-style: none;
+  align-items: center;
 }
-.payment_img img {
-  width: 50px;
+.payment_img li {
+  padding: 7px;
+}
+.apple_pay {
+  width: 55px;
+}
+.master {
+  width: 43px;
+}
+.paypal {
+  width: 20px;
+}
+.visa {
+  width: 43px;
+}
+.copyright {
+  float: right;
 }
